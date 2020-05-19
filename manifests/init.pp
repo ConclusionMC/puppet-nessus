@@ -34,13 +34,15 @@
 # Copyright 2014 Adam Crews, unless otherwise noted.
 #
 class nessus (
-  Optional[String[1]]     $activation_code = undef,
-  String[1]               $package_ensure  = $nessus::params::package_ensure,
-  String[1]               $package_name    = $nessus::params::package_name,
-  Nessus::Service::Ensure $service_ensure  = $nessus::params::service_ensure,
-  String[1]               $service_name    = $nessus::params::service_name,
-  Boolean                 $service_enable  = $nessus::params::service_enable,
-  Boolean                 $service_manage  = $nessus::params::service_manage,
+  Optional[String[1]]        $activation_code = undef,
+  String[1]                  $package_ensure  = $nessus::params::package_ensure,
+  String[1]                  $package_name    = $nessus::params::package_name,
+  Optional[Stdlib::Host]               $proxy_host      = undef,
+  Optional[Stdlib::Port::Unprivileged] $proxy_port      = undef,
+  Nessus::Service::Ensure    $service_ensure  = $nessus::params::service_ensure,
+  String[1]                  $service_name    = $nessus::params::service_name,
+  Boolean                    $service_enable  = $nessus::params::service_enable,
+  Boolean                    $service_manage  = $nessus::params::service_manage,
 ) inherits nessus::params {
 
   anchor { 'nessus::begin': }
