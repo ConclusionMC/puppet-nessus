@@ -6,8 +6,8 @@ class nessus::config {
   if $caller_module_name != $module_name {
     fail("Use of private class ${name} by ${caller_module_name}")
   }
-  if $nessus::proxy_host {
-    if $nessus::proxy_port == undef {
+  if $::nessus::proxy_host {
+    if $::nessus::proxy_port == undef {
       fail("When nessus::proxy_host is provided, a nessus::proxy_port is mandatory")
     }
     exec { 'set proxy':
