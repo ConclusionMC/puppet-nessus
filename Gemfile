@@ -1,14 +1,15 @@
 source "https://rubygems.org"
 
 group :test do
-  gem 'json_pure', '<= 2.0.1' if RUBY_VERSION < '2.0.0'
+  gem 'json_pure'
   gem 'jsonlint'
 
   gem 'metadata-json-lint'
 
   gem 'openssl'
+  gem 'pdk'
 
-  gem 'puppet', '~> 4.10.0'
+  gem 'puppet', '~> 6.12.0'
   gem 'puppet-lint'
   gem 'puppet-lint-absolute_classname-check'
   gem 'puppet-lint-classes_and_types_beginning_with_digits-check'
@@ -25,7 +26,7 @@ group :test do
   gem 'rspec'
   gem 'rspec-puppet'
   gem 'rspec-puppet-facts'
-  gem 'rubocop', '0.54.0'
+  gem 'rubocop'
 
   gem 'semantic_puppet'
   gem 'simplecov'

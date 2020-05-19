@@ -1,7 +1,7 @@
 {
   "name": "cmc-nessus",
-  "version": "0.5.1",
-  "author": "Adam Crews",
+  "version": "0.6.0",
+  "author": "cmc",
   "summary": "Nessus Module",
   "license": "Apache-2.0",
   "source": "https://github.com/ConclusionMC/puppet-nessus",
