@@ -59,7 +59,6 @@ end
 
 desc 'all in 1'
 task release: [
-  'validate:all',
   'release:tagging',
   'release:propagate'
 ]
